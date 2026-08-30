@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="docs/images/dcs-music-player-banner.png" alt="DCS Music Player" width="900" height="auto" />
+  <img src="https://github.com/FwSchultz/assets/blob/main/bots/FwS-Bots/Bot.png" alt="Fw.Schultz Logo" width="200" height="auto" />
 
   <h1>DCS Music Player</h1>
 
@@ -93,6 +93,10 @@ Der Player wird ausschließlich im **Saved-Games-Verzeichnis** von DCS installie
 ---
 
 ## Screenshots
+
+<p align="center">
+  <img src="docs/images/dcs-music-player-banner.png" alt="DCS Music Player Banner" width="1000" />
+</p>
 
 ### Im DCS-Hauptmenü
 
