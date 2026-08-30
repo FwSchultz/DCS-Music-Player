@@ -7,6 +7,12 @@
   <p>Ein kompakter In-Game-Musikplayer für DCS World – eigene Musik hören und steuern, ohne das Spiel verlassen zu müssen.</p>
 
 <p>
+  <strong>Deutsch</strong>
+  <span> · </span>
+  <a href="README_EN.md">English</a>
+</p>
+
+<p>
   <a href="https://github.com/FwSchultz/DCS-Music-Player/releases">
     <img src="https://img.shields.io/badge/version-v0.5.0-blue" alt="version" />
   </a>
