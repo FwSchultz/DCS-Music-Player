@@ -34,6 +34,10 @@
 
 <br />
 
+<p align="center">
+  <img src="docs/images/dcs-music-player-banner.png" alt="DCS Music Player Banner" width="1000" />
+</p>
+
 # Inhaltsverzeichnis
 
 - [Über das Projekt](#über-das-projekt)
@@ -93,10 +97,6 @@ Der Player wird ausschließlich im **Saved-Games-Verzeichnis** von DCS installie
 ---
 
 ## Screenshots
-
-<p align="center">
-  <img src="docs/images/dcs-music-player-banner.png" alt="DCS Music Player Banner" width="1000" />
-</p>
 
 ### Im DCS-Hauptmenü
 
