@@ -1,0 +1,95 @@
+-- DCS Music Player v0.5.0
+-- Dark compact layout: title/time in window header, controls + playlist, slider.
+
+local function button(x, y, w, h, text, tooltip, enabled)
+    return {
+        ["params"] = {
+            ["bounds"] = { ["h"] = h, ["w"] = w, ["x"] = x, ["y"] = y },
+            ["enabled"] = enabled ~= false,
+            ["tabOrder"] = 0,
+            ["text"] = text,
+            ["tooltip"] = tooltip or "",
+            ["visible"] = true,
+            ["zindex"] = 1
+        },
+        ["skin"] = { ["params"] = { ["name"] = "buttonSkinAwacs" } },
+        ["type"] = "Button"
+    }
+end
+
+dialog = {
+    ["type"] = "Window",
+    ["params"] = {
+        ["bounds"] = { [1] = { ["h"] = 90, ["w"] = 328, ["x"] = 0, ["y"] = 0 } },
+        ["draggable"] = true,
+        ["enabled"] = true,
+        ["hasCursor"] = true,
+        ["lockFlow"] = false,
+        ["modal"] = false,
+        ["offscreen"] = false,
+        ["resizable"] = true,
+        ["zOrder"] = 112,
+        ["text"] = "♫"
+    },
+    ["skin"] = {
+        ["params"] = { ["name"] = "windowSkin" },
+        ["skins"] = {
+            ["header"] = {
+                ["skinData"] = {
+                    ["params"] = {
+                        ["hasCloseButton"] = false,
+                        ["insets"] = { ["bottom"] = 2, ["left"] = 2, ["right"] = 2, ["top"] = 2 }
+                    },
+                    ["states"] = {
+                        ["released"] = {
+                            [1] = { ["bkg"] = {["center_center"] = "0x111820ee"}, ["text"] = {["color"] = "0xffc9d0d6"} },
+                            [2] = { ["bkg"] = {["center_center"] = "0x111820ee"}, ["text"] = {["color"] = "0xffc9d0d6"} }
+                        }
+                    }
+                }
+            }
+        },
+        ["states"] = { ["released"] = { [1] = { ["bkg"] = {["center_center"] = "0x0f171dcc"} } } }
+    },
+    ["children"] = {
+        ["Box"] = {
+            ["children"] = {
+                ["PrevButton"] = button(8, 5, 44, 26, "◄◄", "Previous track"),
+                ["PlayButton"] = button(58, 5, 44, 26, "►", "Play current track"),
+                ["StopButton"] = button(108, 5, 44, 26, "■", "Stop playback"),
+                ["NextButton"] = button(158, 5, 44, 26, "►►", "Next track"),
+                ["ShuffleButton"] = button(208, 5, 46, 26, "⇄", "Shuffle"),
+                ["PlaylistDropdownButton"] = button(260, 5, 44, 26, "≡", "Playlists"),
+
+                ["VolumeValue"] = button(250, 36, 54, 20, "70%", "Music volume", false),
+                ["VolumeSlider"] = {
+                    ["params"] = {
+                        ["bounds"] = { ["h"] = 20, ["w"] = 236, ["x"] = 8, ["y"] = 31 },
+                        ["enabled"] = true,
+                        ["pageStep"] = 10,
+                        ["range"] = { ["max"] = 100, ["min"] = 0 },
+                        ["step"] = 1,
+                        ["tabOrder"] = 0,
+                        ["text"] = "",
+                        ["tooltip"] = "Music volume",
+                        ["value"] = 70,
+                        ["visible"] = true,
+                        ["zindex"] = 0
+                    },
+                    ["skin"] = { ["params"] = { ["name"] = "horzSliderSkin_options" } },
+                    ["type"] = "HorzSlider"
+                }
+            },
+            ["params"] = {
+                ["bounds"] = { [1] = { ["h"] = 70, ["w"] = 328, ["x"] = 0, ["y"] = 0 } },
+                ["enabled"] = true,
+                ["text"] = "",
+                ["tooltip"] = "",
+                ["visible"] = true,
+                ["zindex"] = 0
+            },
+            ["skin"] = { ["params"] = { ["name"] = "panelSkin" } },
+            ["type"] = "Panel"
+        }
+    }
+}

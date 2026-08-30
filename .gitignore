@@ -1,0 +1,25 @@
+# DCS Music Player - local/user generated files
+Config/DCS-Music-Player/config.lua
+Logs/
+*.log
+
+# Never commit personal music files
+*.ogg
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.aac
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.old
+*~
